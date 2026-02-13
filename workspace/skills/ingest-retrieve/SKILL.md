@@ -1,0 +1,16 @@
+---
+name: ingest-retrieve
+description: Data ingestion and retrieval pipelines. Use for ETL-style ingestion, normalization, indexing, and queryable storage setup.
+---
+
+# ingest-retrieve
+
+Define objective, inputs, workflow, outputs, and quality checks before first production use.
+
+## Default Workflow
+
+1. Clarify objective and constraints.
+2. Gather required sources/tools.
+3. Execute repeatable process.
+4. Validate output quality.
+5. Save artifacts and next actions.
