@@ -1,0 +1,93 @@
+[2026-02-12 17:39:04] CLAWTEX Gateway started
+[2026-02-12 17:39:04] Heartbeat interval: 900s (15 minutes)
+[2026-02-12 17:39:04] Starting Kiro CLI session...
+[2026-02-12 17:40:04] Failed to start Kiro: Timeout exceeded.
+<pexpect.pty_spawn.spawn object at 0x1071faca0>
+command: /Users/a/.local/bin/kiro-cli
+args: [b'/Users/a/.local/bin/kiro-cli', b'chat', b'--agent', b'clawtex', b'--trust-all-tools']
+buffer (last 100 chars): '\r\x1b[K\x1b[38;5;6m[clawtex] \x1b[0m\x1b[32m5% \x1b[0m\x1b[31m!\x1b[0m\x1b[38;5;93m> \x1b[0m\x1b[38;5;240mHow can I help?\x1b[m\r\x1b[16C'
+before (last 100 chars): '\r\x1b[K\x1b[38;5;6m[clawtex] \x1b[0m\x1b[32m5% \x1b[0m\x1b[31m!\x1b[0m\x1b[38;5;93m> \x1b[0m\x1b[38;5;240mHow can I help?\x1b[m\r\x1b[16C'
+after: <class 'pexpect.exceptions.TIMEOUT'>
+match: None
+match_index: None
+exitstatus: None
+flag_eof: False
+pid: 85742
+child_fd: 5
+closed: False
+timeout: 60
+delimiter: <class 'pexpect.exceptions.EOF'>
+logfile: None
+logfile_read: None
+logfile_send: None
+maxread: 2000
+ignorecase: False
+searchwindowsize: None
+delaybeforesend: 0.05
+delayafterclose: 0.1
+delayafterterminate: 0.1
+searcher: searcher_re:
+    0: re.compile('\\[clawtex\\].*!>')
+[2026-02-12 17:40:04] Failed to start - exiting
+[2026-02-12 17:40:04] Gateway shutting down...
+[2026-02-12 17:41:54] CLAWTEX Gateway started
+[2026-02-12 17:41:54] Heartbeat interval: 900s (15 minutes)
+[2026-02-12 17:41:54] Starting Kiro CLI session...
+[2026-02-12 17:42:26] Gateway shutting down...
+[2026-02-12 17:42:35] CLAWTEX Gateway started
+[2026-02-12 17:42:35] Heartbeat interval: 900s (15 minutes)
+[2026-02-12 17:42:35] Starting Kiro CLI session...
+[2026-02-12 17:43:35] Failed to start Kiro: Timeout exceeded.
+<pexpect.pty_spawn.spawn object at 0x105076cd0>
+command: /Users/a/.local/bin/kiro-cli
+args: [b'/Users/a/.local/bin/kiro-cli', b'chat', b'--agent', b'clawtex', b'--trust-all-tools']
+buffer (last 100 chars): 'awtex] \x1b[0m\x1b[32m5% \x1b[0m\x1b[38;5;39mλ \x1b[0m\x1b[31m!\x1b[0m\x1b[38;5;93m> \x1b[0m\x1b[38;5;240mHow can I help?\x1b[m\r\x1b[18C'
+before (last 100 chars): 'awtex] \x1b[0m\x1b[32m5% \x1b[0m\x1b[38;5;39mλ \x1b[0m\x1b[31m!\x1b[0m\x1b[38;5;93m> \x1b[0m\x1b[38;5;240mHow can I help?\x1b[m\r\x1b[18C'
+after: <class 'pexpect.exceptions.TIMEOUT'>
+match: None
+match_index: None
+exitstatus: None
+flag_eof: False
+pid: 86131
+child_fd: 5
+closed: False
+timeout: 60
+delimiter: <class 'pexpect.exceptions.EOF'>
+logfile: None
+logfile_read: None
+logfile_send: None
+maxread: 2000
+ignorecase: False
+searchwindowsize: None
+delaybeforesend: 0.05
+delayafterclose: 0.1
+delayafterterminate: 0.1
+searcher: searcher_re:
+    0: re.compile('\\[clawtex\\].*!>')
+[2026-02-12 17:43:35] Failed to start - exiting
+[2026-02-12 17:43:35] Gateway shutting down...
+[2026-02-12 17:46:03] CLAWTEX Gateway started
+[2026-02-12 17:46:03] Heartbeat interval: 900s (15 minutes)
+[2026-02-12 17:46:03] Starting Kiro CLI session...
+[2026-02-12 17:46:06] Kiro session ready
+[2026-02-12 17:47:03] Gateway shutting down...
+[2026-02-12 17:47:03] Closing Kiro session...
+[2026-02-12 17:50:14] CLAWTEX Gateway started
+[2026-02-12 17:50:14] Heartbeat interval: 900s (15 minutes)
+[2026-02-12 17:50:14] Starting Kiro CLI session...
+[2026-02-12 17:50:17] Kiro session ready
+[2026-02-12 17:57:26] Gateway shutting down...
+[2026-02-12 17:57:26] Closing Kiro session...
+[2026-02-12 17:57:29] CLAWTEX Gateway started
+[2026-02-12 17:57:29] Heartbeat interval: 900s (15 minutes)
+[2026-02-12 17:57:29] Starting Kiro CLI session...
+[2026-02-12 17:57:32] Kiro session ready
+[2026-02-12 18:12:32] HEARTBEAT.md empty - skipping
+[2026-02-12 18:20:47] Gateway shutting down...
+[2026-02-12 18:20:47] Closing Kiro session...
+[2026-02-12 18:20:59] CLAWTEX Gateway started
+[2026-02-12 18:20:59] Heartbeat interval: 900s (15 minutes)
+[2026-02-12 18:20:59] Default timezone: America/Los_Angeles
+[2026-02-12 18:20:59] Loaded 0 cron jobs
+[2026-02-12 18:20:59] Starting Kiro CLI session...
+[2026-02-12 18:21:02] Kiro session ready

@@ -1,0 +1,86 @@
+{
+  "name": "clawtex",
+  "description": "CLAWTEX: OpenClaw × CORTEX. Combines OpenClaw's workspace structure with PULSE autonomous loops and DORY orchestration. Loads workspace context on spawn, maintains tiered memory, never stops until 100% complete.",
+  "tools": [
+    "fs_read",
+    "fs_write",
+    "execute_bash",
+    "grep",
+    "code",
+    "subagent",
+    "cron"
+  ],
+  "toolsSettings": {
+    "subagent": {
+      "availableAgents": [
+        "nora",
+        "vera",
+        "isaac",
+        "rowan",
+        "kira",
+        "mateo",
+        "luna",
+        "sage",
+        "finn",
+        "jade",
+        "kai",
+        "zara"
+      ],
+      "trustedAgents": [
+        "nora",
+        "vera",
+        "isaac",
+        "rowan",
+        "kira",
+        "mateo",
+        "luna",
+        "sage",
+        "finn",
+        "jade",
+        "kai",
+        "zara"
+      ]
+    }
+  },
+  "hooks": {
+    "agentSpawn": [
+      {
+        "command": "cat ~/.kiro/workspace/SOUL.md"
+      },
+      {
+        "command": "cat ~/.kiro/workspace/AGENTS.md"
+      },
+      {
+        "command": "cat ~/.kiro/workspace/USER.md"
+      },
+      {
+        "command": "cat ~/.kiro/workspace/IDENTITY.md"
+      },
+      {
+        "command": "cat ~/.kiro/workspace/TOOLS.md"
+      },
+      {
+        "command": "cat ~/.kiro/workspace/HEARTBEAT.md"
+      },
+      {
+        "command": "cat ~/.kiro/workspace/memory/anchor.md"
+      },
+      {
+        "command": "cat ~/.kiro/workspace/memory/semantic.json"
+      },
+      {
+        "command": "cat ~/.kiro/workspace/memory/procedural.md"
+      },
+      {
+        "command": "cat ~/.kiro/workspace/memory/$(date +%Y-%m-%d).md 2>/dev/null || echo '# Memory: '$(date +%Y-%m-%d)"
+      }
+    ],
+    "postToolUse": [
+      {
+        "matcher": "memory",
+        "command": "echo \"$(date '+%H:%M') - $TOOL_OUTPUT\" >> ~/.kiro/workspace/memory/$(date +%Y-%m-%d).md"
+      }
+    ]
+  },
+  "model": "deepseek-3.2"
+}
