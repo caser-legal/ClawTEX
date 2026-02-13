@@ -1,0 +1,30 @@
+{
+  "name": "recursive-test",
+  "description": "Test agent with use_subagent tool enabled to test recursive spawning capability",
+  "tools": [
+    "fs_read",
+    "fs_write",
+    "execute_bash",
+    "grep",
+    "code",
+    "subagent",
+    "cron"
+  ],
+  "allowedTools": [
+    "fs_read",
+    "grep",
+    "code",
+    "subagent"
+  ],
+  "toolsSettings": {
+    "subagent": {
+      "availableAgents": [
+        "recursive-test"
+      ],
+      "trustedAgents": [
+        "recursive-test"
+      ]
+    }
+  },
+  "model": "claude-sonnet-4.5"
+}
