@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-CLAWTEX Gateway - OpenClaw-compatible cron + heartbeat system
+CLAWTEX Gateway - OpenClaw-compatible cron + heartbeat system + Discord bot
 Full implementation matching OpenClaw specification
 """
 
@@ -14,6 +14,9 @@ from datetime import datetime
 from croniter import croniter
 from pathlib import Path
 import pytz
+import threading
+import subprocess
+import asyncio
 
 # Configuration
 HEARTBEAT_INTERVAL = 900  # 15 minutes
@@ -30,6 +33,8 @@ DEFAULT_TZ = "America/Los_Angeles"  # PST
 kiro_process = None
 jobs = []
 last_heartbeat = 0
+discord_bot_process = None
+discord_bot_loop = None
 
 def log(message):
     """Log with timestamp"""
@@ -388,6 +393,61 @@ def main():
     log(f"Heartbeat interval: {HEARTBEAT_INTERVAL}s ({HEARTBEAT_INTERVAL//60} minutes)")
     log(f"Default timezone: {DEFAULT_TZ}")
     
+    # Start Discord bot
+    start_discord_bot()
+    
+
+def start_discord_bot():
+    """Start Discord bot in separate thread"""
+    global discord_bot_process
+    
+    token = os.getenv('DISCORD_BOT_TOKEN')
+    if not token:
+        log("No DISCORD_BOT_TOKEN - skipping Discord bot")
+        return
+    
+    log("Starting Discord bot...")
+    discord_bot_process = subprocess.Popen(
+        [sys.executable, str(Path.home() / ".kiro" / "discord-bot.py")],
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        text=True,
+        bufsize=1
+    )
+    
+    # Start thread to monitor Discord messages
+    threading.Thread(target=monitor_discord_messages, daemon=True).start()
+    log("✅ Discord bot started")
+
+def monitor_discord_messages():
+    """Monitor Discord bot stdout for inbound messages"""
+    global discord_bot_process, kiro_process
+    
+    if not discord_bot_process:
+        return
+    
+    for line in discord_bot_process.stdout:
+        line = line.strip()
+        if line.startswith("DISCORD_INBOUND:"):
+            msg = line.replace("DISCORD_INBOUND:", "")
+            log(f"Discord → Kiro: {msg}")
+            # Send to main Kiro session
+            try:
+                kiro_process.sendline(msg)
+            except:
+                log("Failed to send Discord message to Kiro")
+
+def send_to_discord(channel_id, text):
+    """Send message to Discord channel"""
+    if not discord_bot_process:
+        return
+    
+    # Send command to Discord bot via stdin
+    try:
+        discord_bot_process.stdin.write(f"SEND:{channel_id}:{text}\n")
+        discord_bot_process.stdin.flush()
+    except:
+        log("Failed to send message to Discord")
     # Load cron jobs
     load_jobs()
     

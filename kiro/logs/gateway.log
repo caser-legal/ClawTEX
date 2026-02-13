@@ -91,3 +91,21 @@ searcher: searcher_re:
 [2026-02-12 18:20:59] Loaded 0 cron jobs
 [2026-02-12 18:20:59] Starting Kiro CLI session...
 [2026-02-12 18:21:02] Kiro session ready
+[2026-02-12 18:36:02] HEARTBEAT.md empty - skipping
+[2026-02-12 18:51:02] HEARTBEAT.md empty - skipping
+[2026-02-12 19:06:02] HEARTBEAT.md empty - skipping
+[2026-02-12 19:07:37] Gateway shutting down...
+[2026-02-12 19:07:37] Closing Kiro session...
+[2026-02-12 19:07:52] CLAWTEX Gateway started
+[2026-02-12 19:07:52] Heartbeat interval: 900s (15 minutes)
+[2026-02-12 19:07:52] Default timezone: America/Los_Angeles
+[2026-02-12 19:07:52] No DISCORD_BOT_TOKEN - skipping Discord bot
+[2026-02-12 19:08:05] CLAWTEX Gateway started
+[2026-02-12 19:08:05] Heartbeat interval: 900s (15 minutes)
+[2026-02-12 19:08:05] Default timezone: America/Los_Angeles
+[2026-02-12 19:08:05] No DISCORD_BOT_TOKEN - skipping Discord bot
+[2026-02-12 19:09:26] CLAWTEX Gateway started
+[2026-02-12 19:09:26] Heartbeat interval: 900s (15 minutes)
+[2026-02-12 19:09:26] Default timezone: America/Los_Angeles
+[2026-02-12 19:09:26] Starting Discord bot...
+[2026-02-12 19:09:26] ✅ Discord bot started
