@@ -1,0 +1,24 @@
+
+   ██████╗██╗      █████╗ ██╗    ██╗████████╗███████╗██╗  ██╗
+  ██╔════╝██║     ██╔══██╗██║    ██║╚══██╔══╝██╔════╝╚██╗██╔╝
+  ██║     ██║     ███████║██║ █╗ ██║   ██║   █████╗   ╚███╔╝ 
+  ██║     ██║     ██╔══██║██║███╗██║   ██║   ██╔══╝   ██╔██╗ 
+  ╚██████╗███████╗██║  ██║╚███╔███╔╝   ██║   ███████╗██╔╝ ██╗
+   ╚═════╝╚══════╝╚═╝  ╚═╝ ╚══╝╚══╝    ╚═╝   ╚══════╝╚═╝  ╚═╝
+                                                              
+            🦞 OpenClaw × CORTEX (PULSE + DORY) 🧠
+
+  ═══════════════════════════════════════════════════════════
+
+  The Synthesis: Best of All Worlds
+
+  ✓ OpenClaw's workspace structure & SOUL system
+  ✓ PULSE's tiered memory & autonomous loops  
+  ✓ DORY's tool orchestration & hooks system
+
+  ═══════════════════════════════════════════════════════════
+
+  Launch: claw | clawtex
+  Verify: ~/.kiro/verify.sh
+  Docs: ~/.kiro/README.md
+

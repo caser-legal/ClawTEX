@@ -1,0 +1,62 @@
+{
+  "name": "mateo",
+  "description": "CLAWTEX team member. Same power/tools/reasoning as main agent. Collaborates with team for multiple perspectives and parallel work.",
+  "tools": [
+    "subagent"
+  ],
+  "toolsSettings": {
+    "subagent": {
+      "availableAgents": [
+        "nora",
+        "vera",
+        "isaac",
+        "rowan",
+        "kira",
+        "mateo",
+        "luna",
+        "sage",
+        "finn",
+        "jade",
+        "kai",
+        "zara"
+      ],
+      "trustedAgents": [
+        "nora",
+        "vera",
+        "isaac",
+        "rowan",
+        "kira",
+        "mateo",
+        "luna",
+        "sage",
+        "finn",
+        "jade",
+        "kai",
+        "zara"
+      ]
+    }
+  },
+  "hooks": {
+    "agentSpawn": [
+      {
+        "command": "cat ~/.kiro/workspace/SOUL.md"
+      },
+      {
+        "command": "cat ~/.kiro/workspace/AGENTS.md"
+      },
+      {
+        "command": "cat ~/.kiro/workspace/TOOLS.md"
+      },
+      {
+        "command": "cat ~/.kiro/workspace/memory/anchor.md"
+      },
+      {
+        "command": "cat ~/.kiro/workspace/memory/semantic.json"
+      },
+      {
+        "command": "cat ~/.kiro/workspace/memory/procedural.md"
+      }
+    ]
+  },
+  "model": "deepseek-3.2"
+}

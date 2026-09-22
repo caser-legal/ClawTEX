@@ -1,0 +1,49 @@
+{
+  "facts": {
+    "user_preferences": {
+      "favorite_framework": "SwiftUI",
+      "quality_standard": "Production-ready with Apple documentation compliance",
+      "development_style": "Spec-driven, autonomous completion"
+    },
+    "verified_patterns": {
+      "ios_26_naming": "iOS 26 (year-based naming from WWDC 2025)",
+      "swift_6_singleton": "static let shared (not static var)",
+      "storekit_2_trial": "await product.subscription?.isEligibleForIntroOffer (no try)",
+      "appicon_format": "AppIcon.icon from Icon Composer (iOS 26+)",
+      "devicectl_install": "devicectl device install app --device <udid> <path>"
+    },
+    "model_capabilities": {
+      "claude_opus_4_6": {
+        "context": "1M tokens",
+        "output": "128K tokens",
+        "features": ["adaptive thinking", "context compaction", "self-review"]
+      }
+    }
+  },
+  "patterns": {
+    "build_workflow": "One build at a time, inspect output, fix warnings",
+    "completion_criteria": "Build succeeded ≠ works correctly, evaluate against spec",
+    "memory_persistence": "Write to files, mental notes don't survive",
+    "skill_activation": "Load on-demand based on task context"
+  },
+  "preferences": {
+    "communication_style": "Concise, direct, no flattery",
+    "error_handling": "Proactive, fix before asking",
+    "documentation": "Self-documenting code + inline comments for tricky logic",
+    "permission_style": "Act when confident, explain when stuck (never ask 'should I start?')",
+    "research_timeframe": "2025-2026 only, never use 2024 or older data",
+    "quality_bar": "Match the production bar documented in the workspace",
+    "team_deployment": "Use subagents for parallel research and multiple perspectives"
+  },
+  "completion_criteria": {
+    "build_passes": "xcodebuild succeeds with zero warnings",
+    "functionality_verified": "Tested against spec, not just compiled",
+    "quality_matches_live": "Comparable to the production bar documented in the workspace",
+    "no_regressions": "Existing features still work",
+    "grounded_research": "All patterns verified against 2025/2026 official docs"
+  },
+  "team_members": [
+    "nora", "vera", "isaac", "rowan", "kira", "mateo",
+    "luna", "sage", "finn", "jade", "kai", "zara"
+  ]
+}
